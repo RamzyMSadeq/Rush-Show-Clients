@@ -56,7 +56,7 @@ class _DeliveryAddressBottomSheetWidgetState extends StateMVC<DeliveryAddressBot
                       //resultCardAlignment: Alignment.bottomCenter,
                     );
                     _con.addAddress(new Address.fromJSON({
-                      'address': result.address,
+                      'address': result.address??'address',
                       'latitude': result.latLng.latitude,
                       'longitude': result.latLng.longitude,
                     }));
