@@ -92,6 +92,8 @@ class User {
   }
 
   bool profileCompleted() {
-    return address != null && address != '' && phone != null && phone != '' && verifiedPhone != null && verifiedPhone;
+    return
+        address != null && address != '' &&
+           phone != null && phone != '' ;
   }
 }

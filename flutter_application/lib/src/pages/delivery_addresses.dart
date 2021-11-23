@@ -48,7 +48,7 @@ class _DeliveryAddressesWidgetState extends StateMVC<DeliveryAddressesWidget> {
           new ShoppingCartButtonWidget(iconColor: Theme.of(context).hintColor, labelColor: Theme.of(context).accentColor),
         ],
       ),
-      floatingActionButton: _con.cart != null && _con.cart.product.market.availableForDelivery
+      floatingActionButton: _con.cart != null
           ? FloatingActionButton(
               onPressed: () async {
                 LocationResult result = await showLocationPicker(
@@ -61,7 +61,7 @@ class _DeliveryAddressesWidgetState extends StateMVC<DeliveryAddressesWidget> {
                   //resultCardAlignment: Alignment.bottomCenter,
                 );
                 _con.addAddress(new Address.fromJSON({
-                  'address': result.address,
+                  'address': result.address??'address',
                   'latitude': result.latLng.latitude,
                   'longitude': result.latLng.longitude,
                 }));
