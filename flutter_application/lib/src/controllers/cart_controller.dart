@@ -141,7 +141,7 @@ class CartController extends ControllerMVC {
 
   void goCheckout(BuildContext context) {
     if (!currentUser.value.profileCompleted()) {
-      Scaffold.of(scaffoldKey?.currentContext).showSnackBar(SnackBar(
+      Scaffold.of(context).showSnackBar(SnackBar(
         content: Text(S.of(state.context).completeYourProfileDetailsToContinue),
         action: SnackBarAction(
           label: S.of(state.context).settings,
@@ -153,7 +153,7 @@ class CartController extends ControllerMVC {
       ));
     } else {
       if (carts[0].product.market.closed) {
-        Scaffold.of(scaffoldKey?.currentContext).showSnackBar(SnackBar(
+        Scaffold.of(context).showSnackBar(SnackBar(
           content: Text(S.of(state.context).this_market_is_closed_),
         ));
       } else {
