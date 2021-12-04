@@ -72,7 +72,7 @@ class User {
     map["bio"] = bio;
     map["media"] = image?.toMap();
     return map;
-  }
+}
 
   Map toRestrictMap() {
     var map = new Map<String, dynamic>();
