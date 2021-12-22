@@ -86,6 +86,11 @@ class _DeliveryPickupWidgetState extends StateMVC<DeliveryPickupWidget> {
                 onPressed: (paymentMethod) {
                   _con.togglePickUp();
                 }),
+            PickUpMethodItem(
+                paymentMethod: _con.getPickUpRamzy(),
+                onPressed: (paymentMethod) {
+                  _con.togglePickUpRamzy();
+                }),
             Column(
               children: <Widget>[
                 Padding(

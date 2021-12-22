@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:markets/src/pages/payment_webview_screen.dart';
 
 import '../../generated/l10n.dart';
 import '../controllers/cart_controller.dart';
@@ -77,7 +78,14 @@ class CartBottomDetailsWidget extends StatelessWidget {
                         child: MaterialButton(
                           elevation: 0,
                           onPressed: () {
-                            _con.goCheckout(context);
+                            // _con.goCheckout(context);
+                            Navigator.of(context).push(
+                              MaterialPageRoute(builder: (context) {
+                                return PaypalPayment(
+                                  
+                                );
+                              },)
+                            );
                           },
                           disabledColor: Theme.of(context).focusColor.withOpacity(0.5),
                           padding: EdgeInsets.symmetric(vertical: 14),

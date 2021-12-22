@@ -53,6 +53,9 @@ class DeliveryPickupController extends CartController {
     return list.pickupList.elementAt(0);
   }
 
+PaymentMethod getPickUpRamzy() {
+    return list.pickupList.elementAt(2);
+  }
   PaymentMethod getDeliveryMethod() {
     return list.pickupList.elementAt(1);
   }
@@ -76,6 +79,16 @@ class DeliveryPickupController extends CartController {
     });
     setState(() {
       getPickUpMethod().selected = !getPickUpMethod().selected;
+    });
+  }
+   void togglePickUpRamzy() {
+    list.pickupList.forEach((element) {
+      if (element != getPickUpRamzy()) {
+        element.selected = false;
+      }
+    });
+    setState(() {
+      getPickUpRamzy().selected = !getPickUpRamzy().selected;
     });
   }
 

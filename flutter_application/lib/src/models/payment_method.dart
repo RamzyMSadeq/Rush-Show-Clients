@@ -33,6 +33,8 @@ class PaymentMethodList {
     this._pickupList = [
       new PaymentMethod("pop", S.of(_context).pay_on_pickup, S.of(_context).click_to_pay_on_pickup, "/PayOnPickup", "assets/img/pay_pickup.png"),
       new PaymentMethod("delivery", S.of(_context).delivery_address, S.of(_context).click_to_pay_on_pickup, "/PaymentMethod", "assets/img/pay_pickup.png"),
+      new PaymentMethod("ramzy1", "ramzy2", "ramzy3", "/PaymentMethod", "assets/img/pay_pickup.png"),
+
     ];
   }
 
